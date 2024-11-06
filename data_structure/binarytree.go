@@ -241,3 +241,24 @@ func swap(nums []int, i, j int) {
 	nums[i] = nums[j]
 	nums[j] = t
 }
+
+/*
+常见题目示例
+*/
+
+// 给定一个二叉树，找出去最大深度
+func maxDepth(root *TreeNode) int {
+	// 返回条件处理
+	if root == nil {
+		return 0
+	}
+	// divide：分左右子树分别计算
+	left := maxDepth(root.Left)
+	right := maxDepth(root.Right)
+
+	// conquer：合并左右子树结果
+	if left > right {
+		return left + 1
+	}
+	return right + 1
+}

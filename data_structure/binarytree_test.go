@@ -69,3 +69,8 @@ func TestQuickSort(t *testing.T) {
 	result := QuickSort(nums)
 	fmt.Println(result)
 }
+
+func TestMaxDepth(t *testing.T) {
+	result := maxDepth(treeNode)
+	fmt.Println(result)
+}
